@@ -1,5 +1,5 @@
 
-namespace = paul_star_survevey
+namespace = paul_star_survey
 #############
 #code for Star studies event by P_aul
 #writing by Infel & P_aul
