@@ -81,3 +81,78 @@ anomaly_category = {
 		ship_event = { id = mem_anomaly_event.5 }	
 	}
 }
+
+#Demon Ship Anomaly
+#Code by Mourn
+#Writing by Malthus and Mourn
+anomaly_category = {
+	key = mem_demon_ship_category
+	desc = mem_demon_ship_category_desc
+	picture = "GFX_evt_gas_giant"
+	level = 2
+	risk = 30
+	
+	spawn_chance = {
+		modifier = {
+			is_planet_class = pc_gas_giant
+			add = 2
+		}
+	}
+	
+	on_spawn = {
+	}
+	
+	on_success = {
+	}
+	
+	on_fail = {
+		ship_event = { id = mem_anomaly_failure.3 }
+	}
+	
+	on_critical_fail = {
+		ship_event = { id = mem_anomaly_failure.3 }	
+	}
+}
+
+#Dead Star Anomaly
+#Idea by Infel
+#Code by LamilLerran
+#Temporary Writing by LamilLerran
+anomaly_category = {
+	key = "mem_dead_star_category"
+	desc = "mem_dead_star_category_desc"
+	picture = GFX_evt_black_hole
+	level = 1
+	risk = 5
+	
+	spawn_chance = {
+		modifier = {
+			AND = {
+				is_planet_class = pc_black_hole
+				has_strategic_resource = no
+				from = {	#Ensures the black hole is reasonably close to homeworld
+					owner = {
+						capital_scope = {
+							distance = {
+								source = FROM
+								max_distance = 100
+								min_distance = 1
+							}
+						}
+					}
+				}
+			}
+			add = 2
+		}
+	}
+	
+	on_spawn = {
+	}
+	
+	on_success = {
+	}
+	
+	on_fail = {
+		ship_event = { id = mem_anomaly_failure.4 }
+	}
+}
