@@ -32,3 +32,32 @@ anomaly = {
 		}
 	}
 }
+
+#Demon Ship Anomaly
+#Code by Mourn
+#Writing by Malthus and Mourn
+anomaly = {
+    event = mem_demon_ship_event.1
+    category = "mem_demon_ship_category"
+    
+    weight = 1
+    
+    potential = {
+        always = yes
+    }
+}
+
+#Dead Star Anomaly
+#Idea by Infel
+#Code by LamilLerran
+#Temporary Writing by LamilLerran
+anomaly = {
+	event = mem_anomaly_event.6
+	category = mem_dead_star_category
+	
+	weight = 1
+	
+	potential = {
+		always = yes
+	}
+}
